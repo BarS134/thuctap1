@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script src="../Js/js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="../css/font-awesome.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<script >
+		new WOW().init();
+	</script>
+	
+</head>
+
+</head>
+<body>
+	<div id="head">
+		<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid nav">
+			
+			<a class="navbar-branch" href="#">
+				<span>Trung tâm học tiếng anh chất lượng cao</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive"> 
+			
+					<li class="nav-item">
+						<a class="nav-link active" href="index.html">Trang chủ </a>
+	
+					</li>
+					<li class="nav-item">
+						<a class="nav-link"> Chương trình học  </a>
+						<ul class="sub-menu">
+					<li><a href="basic.html">Tiếng anh cơ bản</a></li>
+					<li><a href="advent.html">Tiếng anh Nâng cao</a>
+					<li><a href="comunication.html">Tiếng anh Giao tiếp</a></li>
+					<li><a href="child.html">Tiếng anh Trẻ nhỏ</a>
+						
+
+					</ul>
+						
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="student.html">Nội quy học viên</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Liên hệ </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Luyện thi</a>
+						<ul class="sub-menu1">
+					<li><a href="tesrwrite.html">Luyện viết </a></li>
+					<li><a href="tesread.html">Luyện đọc </a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav> 
+	<div class="heading">
+		<div class="row">
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				<img src="images/nasao-logo-1.png">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <input  id="seach" type="text" name="timkiem" placeholder="Nhập từ khóa tìm kiếm  ">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <a class="" href=""><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+				 <a class="" href=""><i class="fa fa-youtube-play icon "style="font-size:35px" aria-hidden="true"></i></a>
+				<button type="button" class="btn btn-primary btn1">Login</button>
+						<button type="button" class="btn btn-primary btn1">Đăng kí </button>
+					
+			</div>
+			
+
+		</div>
+	</div> 
+	<div id="slider-show">
+		
+		<img class=" img-slide " src="images/banner-nasao-06-min.jpg">
+	
+	
+		<img  class="img-slide" src="images/banner-nasao-L2-01-min-1400x439.png">
+		
+		<img class="img-slide"  src="images/banner-nasao-L2-02-min-1400x439.png">
+	
+		<button class="prev" onclick="next(-1)"> < </button>
+		<button class="next" onclick="next(1)"> > </button>
+	
+	</div>
+	<div id="main1">
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		</div>
+	<script >
+		
+		var index=1;//Trỏ vào slice đàu tiên 
+		show(index);
+		function next(n){
+			show(index+=n);
+		}
+		function show(n){
+			var x= document.getElementsByClassName("img-slide");
+			if(n>x.length)//khi quá số slice nó sẽ quay về ảnh đầu tiên 
+				index=1;
+			if(n<1)
+				index=x.length;
+			for (var i = 0; i <x.length; i++) {
+				x[i].style.display="none"
+			}
+			x[index-1].style.display="block";
+		}
+		setInterval(function(){
+			next(1);
+		},10000);
+	</script>
+
+
+
+	
+	<div class="container-fluid contact ">
+		<div class="row">
+			<div class="col-12 col-md-12 col-sm-12 col-lg-4 col-xl-4  box1 ">
+				<h3>Văn phòng giao dịch Nasao English </h3>
+			<img src="images/nasao-logo-1.png">
+				<p class="bos"> Trâu Quỳ- Gia Lâm- Hà Nội  </p>
+				<p class="bos1">097 398 30 89 – Ms Linh</p>
+				<p> Với phương trâm, người thầy vĩ đại truyền cảm hứng, các giảng viên tại nasao luôn hiểu được cốt lõi và bản chất của giáo dục là truyền động lực mạnh mẽ và khát khao cháy bỏng cho học viên khi theo đuổi bất kì môn học nào.<p>
+
+			</div>
+			<div class="col-12 col-md-6 col-sm-12 col-lg-4  col-xl-4  box2 ">
+				<form method="get" accept-charset="utf-8" id="formDemo">
+		<fieldset>
+			<div class="ten">
+				<input name="ho" type="text" placeholder="Tên của bạn " required>
+			
+				</div>
+				<div class="ten">
+				<input name="ten" type="text" placeholder="Email của bạn *" required>
+			</div>
+			<div class="ten">
+				
+				<input name="diachi" type="text" placeholder="Chủ đề " required>
+			</div>
+		
+		</fieldset>
+
+	</form>
+	
+			</div>
+			<div class="col-12 col-md-6 col-sm-12 col-lg-4  col-xl-4 box3 ">
+				<form method="get" accept-charset="utf-8" id="formDemo">
+				<fieldset>
+				<div class="messages" >
+				<input name="email" type="text" placeholder="Bạn vui lòng để lại nội dung, trung tâm sẽ sớm liên lạc lại với bạn sớm nhất " required>
+			
+			<button type="submit" class="btn btn-primary a">Gửi Messages</button>
+			<fieldset>
+		</div>
+	
+	</form>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid ">
+
+				<div class="col-12 col-md-12 col-sm-12  col-lg-12 services-title">
+					
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 map ">
+			
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.552627775057!2d105.93282051488319!3d21.010562886008312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a8cffc521a33%3A0xaab827fda0a3dfe2!2zVHJ1bmcgdMOibSBBbmggbmfhu68gTmFzYW8gY8ahIHPhu58gMg!5e0!3m2!1svi!2s!4v1614224334014!5m2!1svi!2s" width="1450px" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+		</div>
+		
+	</div>
+</div>	
+	
+	<div class=" footer">
+		 <div class="row footerr "> 
+	
+				<div class="col-12 col-md-6 col-sm-6 col-lg-3 col-xl-3 box1">
+					<p class="footer1">Về  Nasao English</p>
+					<p class="footer2">Giớ thiệu </p>
+					<p class="footer2">Liên hệ </p>
+					<p class="footer2">Chương trình học</p>
+					<p class="footer2">Luyện thi</p>
+				</div>
+				<div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-3  box">
+					<p class="footer1">Liên hệ </p>
+					<p class="footer2">Địa chỉ 1: Số 16, ngõ 2</p>
+<p class="footer2">Địa chỉ 2: tầng 2 – số 345 Ngô Xuân Quảng , Trâu Quỳ, Gia Lâm Phố, Việt Nam.</p>
+					
+					<p class="đt"> 097 398 30 89</p>
+					<p class="đt">Cô Nguyễn Thị Linh</p>
+				</div>
+				<div class="col-12 col-md-7 col-sm-7 col-lg-5 col-xl-6 boxx2 ">
+					<p class="footer1"> Dịch vụ nổi bật</p>
+					<p class="footer2">You can trust us. we only send promo offers, not a single spam.</p>
+					
+					<button type="button" class="btn btn-outline-secondary button">Your Mail Address</button><button class="btn btn-primary prima" type="submit">GetStarted  <i class="fa fa-arrow-right right" aria-hidden="true"></i> </button>
+				</div>
+				<div class="col-12 col-md-12 col-sm-12 col-lg-9 col-xl-7 boxx1">
+					<p>Coppyright@2019 All rights reserved| This template is made with <i class="fa fa-heart-o heart" aria-hidden="true"></i> by <span class="heart">Kindeser</span></p>
+			</div>
+
+			<div class="col-12 col-md-12 col-sm-12 col-lg-3 col-xl-5 boxx1">
+					<a target="_blank" href="https://www.facebook.com/nasao.vn "><img src="images/facebook.png" style="width: 50px;height: 50px;"> 
+					<a target="_blank" href="https://goo.gl/UPNpuD"><img src="images/youtobe.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://zalo.me/0973983089"><img src="images/zalo.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://m.me/nasao.vn"><img src="images/mess.png" style="width: 50px;height: 50px;">
+				</div>
+			</div>
+		</div>
+		
+</div>
+	
+</body>
+</html>

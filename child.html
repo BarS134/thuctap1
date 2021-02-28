@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script src="../Js/js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="../css/font-awesome.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<script >
+		new WOW().init();
+	</script>
+	
+</head>
+
+</head>
+<body>
+	<div id="head">
+		<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid nav">
+			
+			<a class="navbar-branch" href="#">
+				<span>Trung tâm học tiếng anh chất lượng cao</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive"> 
+			
+					<li class="nav-item">
+						<a class="nav-link active" href="index.html">Trang chủ </a>
+	
+					</li>
+					<li class="nav-item">
+						<a class="nav-link"> Chương trình học  </a>
+						<ul class="sub-menu">
+					<li><a href="basic.html">Tiếng anh cơ bản</a></li>
+					<li><a href="advent.html">Tiếng anh Nâng cao</a>
+					<li><a href="comunication.html">Tiếng anh Giao tiếp</a></li>
+					<li><a href="child.html">Tiếng anh Trẻ nhỏ</a>
+						
+					</ul>
+						
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="student.html">Nội quy học viên</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Liên hệ </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link">Luyện thi</a>
+						<ul class="sub-menu1">
+					<li><a href="tesrwrite.html">Luyện viết </a></li>
+					<li><a href="tesread.html">Luyện đọc </a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav> 
+	<div class="heading">
+		<div class="row">
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				<img src="images/nasao-logo-1.png">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <input  id="seach" type="text" name="timkiem" placeholder="Nhập từ khóa tìm kiếm  ">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <a class="" href=""><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+				 <a class="" href=""><i class="fa fa-youtube-play icon "style="font-size:35px" aria-hidden="true"></i></a>
+				<button type="button" class="btn btn-primary btn1">Login</button>
+					<button type="button" class="btn btn-primary btn1">Đăng kí </button>
+						
+		</div>
+			
+		</div>
+	</div> 
+
+
+	<div id="slider-show">
+		
+		<img class=" img-slide " src="images/banner-nasao-06-min.jpg">
+	
+	
+		<img  class="img-slide" src="images/banner-nasao-L2-01-min-1400x439.png">
+		
+		<img class="img-slide"  src="images/banner-nasao-L2-02-min-1400x439.png">
+	
+		<button class="prev" onclick="next(-1)"> < </button>
+		<button class="next" onclick="next(1)"> > </button>
+	
+	</div>
+	<div id="main1">
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		</div>
+	<script >
+		
+		var index=1;//Trỏ vào slice đàu tiên 
+		show(index);
+		function next(n){
+			show(index+=n);
+		}
+		function show(n){
+			var x= document.getElementsByClassName("img-slide");
+			if(n>x.length)//khi quá số slice nó sẽ quay về ảnh đầu tiên 
+				index=1;
+			if(n<1)
+				index=x.length;
+			for (var i = 0; i <x.length; i++) {
+				x[i].style.display="none"
+			}
+			x[index-1].style.display="block";
+		}
+		setInterval(function(){
+			next(1);
+		},10000);
+	</script>
+
+<div class="container-fluid">
+	<div class="row ">
+		<div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-12 department ">
+			<center>
+				<p class="category">Tiếng Anh Cho Học Viên Nhỏ </p>
+			<h5 style="color: pink;">Cho trẻ một khởi đầu học tập từ những lớp học tiếng Anh truyền cảm hứng</h5>
+				<p class=Category>Khóa tiếng Anh tiểu học – Primary Plus sẽ khuyến khích các học viên từ 6 đến 11 tuổi thể hiện bản thân trong một môi trường học an toàn, và khích lệ cho trẻ. Chúng tôi xây dựng một không gian chỉ giao tiếp bằng tiếng Anh. Trong đó, trẻ sẽ cảm nhận được vị trí trung tâm trong quá trình học của mình và phát triển sự tự tin cũng như khả năng sử dụng tiếng Anh lưu loát. Trong các khóa học tiếng Anh, trẻ sẽ học tập bằng cách tham gia vào các hoạt động gây hứng thú với các em. Các giáo viên giàu kinh nghiệm sẽ giúp học viên phát triển kỹ năng tiếng Anh cũng như khả năng sáng tạo, tư duy phản biện, kỹ năng giải quyết vấn đề và kỹ năng lãnh đạo. Chúng tôi coi phụ huynh như những đối tác.<br> Chúng tôi tiếp nhận thường xuyên các phản hồi về quá trình phát triển của các học viên. Với mỗi độ tuổi, chúng tôi sẽ đánh giá sự phát triển về khả năng tiếng Anh và các kỹ năng sống thiết yếu. Mục tiêu cuối khóa học của chúng tôi là các học viên sẽ đạt được tối thiểu trình độ A2 theo khung tham chiếu châu Âu (CEFR). Ngoài ra, học viên cũng có thể đăng nhập vào tài khoản học tập trực tuyến Primary Plus để học viên có thể tiếp tục học tập tại nhà."</p>
+				<br>
+				<iframe width="760px" height="415px" src="https://www.youtube.com/embed/HdJ3kepjPeA"  ></iframe>
+
+				<h5 style="color: pink;">Cảm hứng. Khuyến khích. Tạo động lực</h5>
+				<p class=Category>Sau khi học xong chương trình,tham gia khóa học, học viên sẽ được:
+Xây dựng sự tự tin thông qua việc sử dụng tiếng Anh để nói về các chủ đề quen thuộc như những sự vật xung quanh các em, từ phòng ngủ cho đến nhà hàng xóm
+Phát triển các kỹ năng sống thiết yếu để chuẩn bị cho tương lai ngay từ trong lớp học
+Khám phá các chủ đề như thế giới tự nhiên, từ dưới đại dương đến ngoài vũ trụ</p>
+			</center>
+		</div>
+</div>
+<div class="container-fluid">
+	<div class="row ">
+		<div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-12 de ">
+			<center>
+				<img src="images/compass.png" style="margin-left: -300px;width: 70px;"><h4 style="color:blue;margin-top: -40px;">Nội dung  Khóa học </h4>
+
+			
+           <table bgcolor="white" border="2px" width="900px" height="700px" cellpadding="10px" cellspacing="1px">
+		<tr>
+			<td><h6 >Học viên từ 5-6 tuổi sẽ:</h6></td>
+			<td><p >Dạy học viên nhí các từ cơ bản về gia đình, và mọi vật xung quanh<br>
+
+Cho học viên tham gia các hoạt động vui chơi nhẹ nhàng để tăng hứng thú học <br>
+
+Luyện viết và rèn tính tự giác học cho học viên khi còn nhỏ .<br>
+
+Cho học viên nghe và xem các video vui nhộn </p></td>
+		</tr>
+		<tr>
+			<td><h6 >Học viên từ 6-7tuổi sẽ:</h6></td>
+			<td><p >Học cách đọc và viết tiếng Anh, bắt đầu từ các từ riêng lẻ, đến các câu hoàn chỉnh<br>Viết các câu chính xác, sử dụng từ vựng mới hiểu <br>thuyết trình ý tưởng về các chủ đề quen thuộc bằng tiếng Anh.<br> Học viên sẽ thực hiện những điều đó thông qua: <br>Tìm hiểu đặc trưng của mỗi người qua sở thích, mối quan tâm của họ <br>Những điều mà họ không thích khám phá cuộc sống thường ngày của mỗi người giống và khác nhau <br>Miêu tả những thứ xung quanh học viên, từ phòng ngủ của học viên đến những người hàng xóm <br> Biết cách diễn đạt cảm xúc và đưa ra các quyết định trong cuộc sống nghĩ về môi trường tự nhiên và nơi mà chúng ta thuộc về</td>
+		</tr>
+		<tr>
+			<td><h6 >Học viên từ 7-8 tuổi sẽ:</h6></td>
+			<td><p >Học và thực hành các từ vựng mới về các chủ đề quen thuộc<br>Trong các hoạt động như viết sáng tạo có thể tự đọc và xác định sự hứng thú với các chủ đề khác nhau<br>Học viên sẽ thực hiện điều đó thông qua: phát triển trí tưởng tượng qua :<br>Hoạt động kể chuyện học từ chính sự tò mò của bản thân về thế giới tự nhiên<br>Từ dưới đáy biển đến ngoài vũ trụ nghĩ chia sẻ về những ý tưởng để duy trì sức khỏe và hạnh phúc<br> khám phá cách trở thành công dân tốt tự phản ánh cuộc sống, sở thích và những hi vọng cho tương lai</td>
+		</tr>
+		<tr>
+			<<td><h6>Học viên từ 8-9 tuổi sẽ:</h6></td>
+			<td><p>Học cách viết lại những câu chuyện và có thể tự tin đọc bằng tiếng Anh<br> Thuyết trình và so sánh những ý tưởng, quan điểm bằng cấu trúc ngữ pháp phức tạp<br>Học viên sẽ thực hiện điều đó thông qua: <br>Sử dụng kỹ năng và kiến thức để giúp đỡ người khác<br> Khám phá các vấn đề tác động đến xã hội và môi trường <br>tìm kiếm giải pháp tìm hiểu về các địa điểm, nền văn hóa, những ý tưởng <br>Các phát minh khám phá thế giới thú vị của thể thao và vẻ đẹp của nghệ thuật nhìn lại quãng thời gian ở tiểu học và suy nghĩ về những mong muốn của bản thân trong tương lai</p></td>
+		</tr>
+
+	</table>
+	
+            <div class="text-center">
+                          <a class="btn btn-block btn-register1" style="background: -webkit-linear-gradient(left,#ff7300,#ffaa30)!important; color: #fff; border: none;">Đăng kí ngay</a>
+            </div>
+        </div>
+    </center>
+          </div>
+          
+  </div>
+
+</div>
+<div class="informatoin">
+	<div class="row">
+		<div class="border text-center text-md-left order-md-2 course-detail-div">
+            <h4 class="title-header" style="font-size: 25px; font-weight: 600; margin-bottom: 10px;"><img class="png-icon mr-3" src="images/direction.png" style="width: 50px !important">THÔNG TIN KHÓA HỌC</h4><br>
+            <div class="flexbox info-course">
+              <span><i class="icon-calendar mr-2"></i><b>Thời lượng</b></span>
+              <b>Từ 3 tháng một lộ trình</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Số lượng học viên</b></span>
+              <b>10 học viên</b>
+
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Học phí </b></span>
+              <b>4.000.000VNĐ</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Giáo viên</b></span>
+              <b>Cô Nguyễn Bảo Anh  <br> Thầy MARTIN ALLEN</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Trợ giảng</b></span>
+              <b>Trần Khánh Linh</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Lịch khai giảng </b></span>
+              <b>Thứ 7 và thứ Chủ nhật hàng tuần <br>(Dự kiến)</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Ngày khai giảng </b></span>
+              <b>19/3/2021</b>
+            </div>
+            <br>
+            <div class="text-center">
+                          <a class="btn btn-block btn-register" href="#class_room_list" style="background: -webkit-linear-gradient(left,#ff7300,#ffaa30)!important; color: #fff; border: none;">Đăng kí ngay</a>
+            </div>
+          </div>	
+          			
+	</div>
+</div>
+<br>
+
+
+
+<div class=" footer">
+		 <div class="row footerr "> 
+	
+				<div class="col-12 col-md-6 col-sm-6 col-lg-3 col-xl-3 box1">
+					<p class="footer1">Về  Nasao English</p>
+					<p class="footer2">Giới thiệu </p>
+					<p class="footer2">Liên hệ </p>
+					<p class="footer2">Chương trình học</p>
+					<p class="footer2">Luyện thi</p>
+				</div>
+				<div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-3  box">
+					<p class="footer1">Liên hệ </p>
+					<p class="footer2">Địa chỉ 1: Số 16, ngõ 237 Ngô Xuân Quảng, Trâu Quỳ, Gia Lâm, Gia Lâm Phố, Việt Nam</p>
+<p class="footer2">Địa chỉ 2: tầng 2 – số 345 Ngô Xuân Quảng , Trâu Quỳ, Gia Lâm Phố, Việt Nam.</p>
+					
+					<p class="đt"> 097 398 30 89</p>
+					<p class="đt">Cô Nguyễn Thị Linh</p>
+				</div>
+				<div class="col-12 col-md-7 col-sm-7 col-lg-5 col-xl-6 boxx2 ">
+					<p class="footer1"> Dịch vụ nổi bật</p>
+					<p class="footer2">You can trust us. we only send promo offers, not a single spam.</p>
+					
+					<button type="button" class="btn btn-outline-secondary button">Your Mail Address</button><button class="btn btn-primary prima" type="submit">GetStarted  <i class="fa fa-arrow-right right" aria-hidden="true"></i> </button>
+				</div>
+				<div class="col-12 col-md-12 col-sm-12 col-lg-9 col-xl-7 boxx1">
+					<p>Coppyright@2019 All rights reserved| This template is made with <i class="fa fa-heart-o heart" aria-hidden="true"></i> by <span class="heart">Kindeser</span></p>
+			</div>
+
+			<div class="col-12 col-md-12 col-sm-12 col-lg-3 col-xl-5 boxx1">
+					<a target="_blank" href="https://www.facebook.com/nasao.vn "><img src="images/facebook.png" style="width: 50px;height: 50px;"> 
+					<a target="_blank" href="https://goo.gl/UPNpuD"><img src="images/youtobe.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://zalo.me/0973983089"><img src="images/zalo.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://m.me/nasao.vn"><img src="images/mess.png" style="width: 50px;height: 50px;">
+				</div>
+			</div>
+		</div>
+		
+</div>
+	
+</body>
+</html>

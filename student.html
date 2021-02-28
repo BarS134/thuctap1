@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script src="../Js/js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="../css/font-awesome.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<script >
+		new WOW().init();
+	</script>
+	
+</head>
+
+</head>
+<body>
+	<div id="head">
+		<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid nav">
+			
+			<a class="navbar-branch" href="#">
+				<span>Trung tâm học tiếng anh chất lượng cao</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive"> 
+			
+					<li class="nav-item">
+						<a class="nav-link active" href="index.html">Trang chủ </a>
+	
+					</li>
+					<li class="nav-item">
+						<a class="nav-link"> Chương trình học  </a>
+						<ul class="sub-menu">
+					<li><a href="basic.html">Tiếng anh cơ bản</a></li>
+					<li><a href="advent.html">Tiếng anh Nâng cao</a>
+					<li><a href="comunication.html">Tiếng anh Giao tiếp</a></li>
+					<li><a href="child.html">Tiếng anh Trẻ nhỏ</a>
+						
+					</ul>
+						
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="student.html">Nội quy học viên</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Liên hệ </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" >Luyện thi</a>
+						<ul class="sub-menu1">
+					<li><a href="tesrwrite.html">Luyện viết </a></li>
+					<li><a href="tesread.html">Luyện đọc </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav> 
+	<div class="heading">
+		<div class="row">
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				<img src="images/nasao-logo-1.png">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <input  id="seach" type="text" name="timkiem" placeholder="Nhập từ khóa tìm kiếm  ">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <a class="" href=""><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+				 <a class="" href=""><i class="fa fa-youtube-play icon "style="font-size:35px" aria-hidden="true"></i></a>
+				<button type="button" class="btn btn-primary btn1">Login</button>
+					<button type="button" class="btn btn-primary btn1">Đăng kí </button>
+						
+		</div>
+			
+		</div>
+	</div> 
+
+
+	<div id="slider-show">
+		
+		<img class=" img-slide " src="images/banner-nasao-06-min.jpg">
+	
+	
+		<img  class="img-slide" src="images/banner-nasao-L2-01-min-1400x439.png">
+		
+		<img class="img-slide"  src="images/banner-nasao-L2-02-min-1400x439.png">
+	
+		<button class="prev" onclick="next(-1)"> < </button>
+		<button class="next" onclick="next(1)"> > </button>
+	
+	</div>
+	<div id="main1">
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		</div>
+	<script >
+		
+		var index=1;//Trỏ vào slice đàu tiên 
+		show(index);
+		function next(n){
+			show(index+=n);
+		}
+		function show(n){
+			var x= document.getElementsByClassName("img-slide");
+			if(n>x.length)//khi quá số slice nó sẽ quay về ảnh đầu tiên 
+				index=1;
+			if(n<1)
+				index=x.length;
+			for (var i = 0; i <x.length; i++) {
+				x[i].style.display="none"
+			}
+			x[index-1].style.display="block";
+		}
+		setInterval(function(){
+			next(1);
+		},10000);
+	</script>
+
+<div class="container-fluid">
+	<div class="row ">
+		<div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-12 department ">
+			<center>
+				<p class="category">CẨM NANG LỚP HỌC:SỔ TAY HỌC VIÊN</p>
+			</center>
+			<h5 style="color: pink;">Sổ tay dành cho học viên anh ngữ Nasao</h5>
+				<h5 width="30%">1. Hướng dẫn đăng ký học và các quy định về nộp học phí</h5>
+a. Hướng dẫn đăng ký học
+<br>
+Bước 1 : Truy cập trang web https://nasao.vn để tìm và đăng ký khóa học phù hợp.
+<br>
+Bước 2 : Kiểm tra email thông báo đăng ký thành công của hệ thống. Vui lòng đọc hết nội dung thông báo trong email
+<br>Bấm “Đăng nhập hệ thống online”, cập nhật thông tin cá nhân và thay đổi mật khẩu.<br>
+Bấm “Tham gia Facebook lớp” để cập nhật thông báo từ Quản lý lớp học và trợ giảng.<br>
+b. Các quy định về nộp học phí<br>
+Học phí và ưu đãi các khóa học dành cho học viên cũ, học viên mới đăng ký học trước 7 ngày, 5 ngày, 3 ngày trước khai giảng cùng combo khóa học.<br>
+Đối với ưu đãi học phí trước 7 ngày, 5 ngày, 3 ngày trước khai giảng, học viên cần hoàn thành 100% học phí trước thời hạn để được nhận ưu đãi.<br>
+<p style="background-color: yellow;">Với học viên cũ, để nhận ưu đãi học phí các bạn cần hoàn thành học phí trước buổi khai giảng. Nếu không các bạn sẽ phải đóng đầy đủ học phí của khóa học mà không nhận được ưu đãi giảm học phí của Nasao.</p>
+Để nhận ưu đãi từ combo các khóa học, các bạn cần đăng ký tất cả các lớp trong combo trên website của Nasao English và hoàn thành trước khai giảng để được ưu đãi học phí.<br>
+Ngoài ra, Nasao English còn có chương trình đóng học phí 02 lần :
+<center>
+				<table bgcolor="white" border="2px" width="900px" height="400px" cellpadding="10px" cellspacing="1px" >
+		<tr>
+			<td><h6> KHOÁ HỌC </h6></td>
+			<td><h6>LẦN 1</h6></td>
+			<td><h6>LẦN 2</h6></td>
+		</tr>
+		<tr>
+			<td><h7>Khóa giao tiếp</h6></td>
+			<td><p>
+				2.000.000VND VNĐ
+			</p></td>
+			<td><p>
+				1.000.000VND VNĐ
+			</p></td>
+		</tr>
+		<tr>
+			<td><h7>Tiếng anh Cơ Bản</h6></td>
+			<td><p>
+				4.000.000VND VNĐ
+			</p></td>
+			<td><p>
+				1.000.000VND VNĐ
+			</p></td>
+		</tr>
+		<tr>
+			<td><h7>Tiếng anh Nâng cao</h6></td>
+			<td><p>
+				6.000.000VND VNĐ
+			</p></td>
+			<td><p>
+				3.000.000VND VNĐ
+			</p></td>
+		</tr>
+		<tr>
+			<td><h7>NasaoKid</h6></td>
+			<td><p>
+				2.000.000VND VNĐ
+			</p></td>
+			<td><p>
+				2.000.000VND VNĐ
+			</p></td>
+		</tr>
+		
+	</table>
+	<p>Các bạn cần hoàn thành học phí lần 1 trước ngày khai giảng và học phí lần 2 trước khi hoàn thành 50% khóa học.
+	</p>
+	</center>
+				<h5 width="30%">2.Quy định về trường hợp nghỉ học</h5>
+				<ul>
+					<li>Học viên nghỉ học có phép sẽ được trợ giảng hỗ trợ hướng dẫn học bù lại kiến thức của buổi đó.</li>
+					<li>Học viên sẽ được nghỉ lễ, tết theo lịch trung tâm quy định, những ngày nghỉ này học viên được học bù đầy đủ.</li>
+					<li>Trong trường hợp bất khả kháng do thiên tai, lũ lụt, mất điện… trung tâm sẽ đề nghị các lớp nghỉ học vì lý do an toàn của giảng viên, học viên và để đảm bảo chất lượng học tập.</li>
+					<li>Trong trường hợp giảng viên nghỉ ốm, tuỳ theo điều kiện cụ thể giảng viên khác được yêu cầu thay thế hoặc lớp học có thể nghỉ và học bù vào buổi tiếp theo.</li>
+					<li style="color: red;">Học viên nghỉ quá 20% số buổi trên lớp bắt buộc phải học lại và nộp tiền như các học viên khác.</li>
+				</ul>
+				<p>
+					Cụ thể lịch như sau:
+				</p>
+			<center>
+				<table bgcolor="white" border="2px" width="800px" height="400px" cellpadding="10px" cellspacing="1px" >
+		<tr>
+			<td><h6>KHÓA HỌC</h6></td>
+			<td><h6>SỐ BUỔI</h6></td>
+			<td><h6>SỐ BUỔI ĐƯỢC PHÉP</h6></td>
+		</tr>
+		<tr>
+			<td><h7>Khóa giao tiếp</h6></td>
+			<td><p>
+				24 BUỔI
+			</p></td>
+			<td><p>
+				4 BUỔI 
+			</p></td>
+		</tr>
+		<tr>
+			<td><h7>Tiếng anh Cơ Bản</h6></td>
+			<td><p>
+				25  BUỔI 
+			</p></td>
+			<td><p>
+				 5 BUỔI 
+			</p></td>
+		</tr>
+		<tr>
+			<td><h7>Tiếng anh Nâng cao</h6></td>
+			<td><p>
+				 30 BUỔI 
+			</p></td>
+			<td><p>
+				6  BUỔI 
+			</p></td>
+		</tr>
+		<tr>
+			<td><h7>NasaoKid</h6></td>
+			<td><p>
+				20 BUỔI 
+			</p></td>
+			<td><p>
+				5 BUỔI 
+			</p></td>
+		</tr>
+		
+	</table>
+	
+	</center>
+	<p>Số buổi nghỉ chỉ áp dụng với các buổi học chính của giảng viên. Đối với các buổi học nhóm cùng trợ giảng, trung tâm khuyến khích các học viên đi học đầy đủ để có thể hoàn thành bài tập và nắm vững kiến thức, đảm bảo hoàn thành tốt việc bảo vệ bài tập lớn cuối khóa.</p>
+
+	<h5 width="30%">3.Quy định chung trong lớp học</h5>
+				<ul>
+					<li>Các buổi học đều được giảng viên hoặc trợ giảng điểm danh, học viên nghỉ học phải có phép</li>
+					<li>Sĩ số lớp trung bình là từ 10 đến 15 học viên. Trong quá trình học nếu lớp thường xuyên duy trì sĩ số dưới 10 học viên, trung tâm có thể đề nghị ghép cùng với lớp khác để đảm bảo chất lượng.</li>
+					<li>Trung tâm và giảng viên có quyền đình chỉ việc học hoặc không cho phép học viên tiếp tục tham gia khoá học với các lý do sau: thường xuyên đi học muộn, ý thức kém, gây rối trong lớp, không tôn trọng giảng viên và học viên khác, lười học, sức khoẻ yếu, mắc bệnh truyền nhiễm …</li>
+					<li>Học viên phải tham dự 80% thời gian của khoá học và hoàn thành chương trình thi cuối khóa để được nhận chứng chỉ hoàn thành khoá học, đồng thời được quyền lợi đăng ký các khóa học tiếp theo trong lộ trình học.</li>
+					<li style="color: red;">Các hình thức phạt đối với học viên:</li>
+				</ul>
+				
+			<center>
+				<table bgcolor="white" border="2px" width="800px" height="400px" cellpadding="10px" cellspacing="1px" >
+		<tr>
+			<td><p>Sử điện thoại riêng trong giờ </p></td>
+			<td><p>5.000VNĐ/lần</p></td>
+			
+		</tr>
+		<tr>
+			<td><p>Nghỉ học không phép</p></td>
+			<td><p>15.000VNĐ/lần</p></td>
+		</tr>
+		<tr>
+			<td><p>Đi học muộn </p></td>
+			<td><p>10.000VNĐ/lần</p></td>
+		</tr>
+		<tr>
+			<td><p>Không nộp bài tập</p></td>
+			<td><p>20.000VNĐ/lần</p></td>
+		</tr>
+		<tr>
+			<td><p>Nộp bài tập muộn</p></td>
+			<td><p>15.000VNĐ/lần</p></td>
+		</tr>
+		<tr>
+			<td><p>Làm việc riêng trong giờ </p></td>
+			<td><p>5.000VNĐ/lần</p></td>
+		</tr>
+		<tr>
+			<td><p>Không chuẩn bị bài </p></td>
+			<td><p>5.000VNĐ/lần</p></td>
+		</tr>
+	</table>
+	
+	</center>
+	<p style="color: red;">Lưu ý: Tùy theo tình hình của lớp, giảng viên hoặc trung tâm có quyền điều chỉnh mức phạt để đảm bảo chất lượng học tập của học viên</p>
+	<h5 width="30%">4.Bài tập hằng tuần và bài tập cuối khóa</h5>
+	<p>Học viên khi tham gia các khóa học tại Nasao English sẽ được giao bài tập cuối mỗi buổi để củng cố kiến thức và một bài tập lớn cuối khóa để bảo vệ và chứng nhận tốt nghiệp. Các trường hợp KHÔNG được chứng nhận tốt nghiệp bao gồm:</p>
+				<ul>
+					<li>Không đi học đủ số buổi quy định.</li>
+					<li>Điểm đánh giá toàn bộ quá trình học dưới 6.0</li>
+					
+				</ul>
+	<h5 width="30%">5.Quy trình và điều kiện bảo lưu</h5>
+	<p>Đối với các học viên tham gia các khóa học tại Nasao English, trong trường hợp có lý do không thể tiếp tục chương trình học, học viên có quyền xin bảo lưu khóa học.</p>
+	<h6>Điều kiện hoàn toàn bảo lưu học phí</h6>
+				<ul>
+					<li>Học phí sẽ không được hoàn lại vì bất cứ lý do nào, ngoại trừ trường hợp trung tâm không mở được lớp đúng với nguyện vọng đăng ký của học viên.</li>
+					<li>Bảo lưu chỉ được thực hiện 01 lần với 01 khóa học.</li>
+					<li>Khóa học xin bảo lưu chưa học quá 50% số buổi.</li>
+					<li>Đã hoàn thành 100% học phí.</li>
+					<li>Học viên sẽ mất quyền bảo lưu nếu không đến làm thủ tục bảo lưu khóa học sau 15 ngày tính từ buổi nghỉ học.</li>
+					<li>Học phí khóa học được bảo lưu không có giá trị chuyển nhượng hay quy đổi tiền mặt..</li>
+				</ul>
+			<h6>Quy trình bảo lưu:</h6>
+				<ul>
+					<li>Học viên đến Trung tâm để làm thủ tục bảo lưu.</li>
+<li>Trình bày rõ lý do xin bảo lưu học tập. Lý do cần hợp lý, khách quan.</li>
+<li>Khóa học xin bảo lưu chưa học quá 50% số buổi.</li>
+<li>Trong thời hạn 6 tháng kể từ ngày trung tâm đồng ý bảo lưu, học viên có nhu cầu trở lại học tập mang theo giấy xác nhận bảo lưu đến trung tâm để tái đăng ký học.</li>
+				</ul>	
+				<h6>Lệ phí bảo lưu:</h6>
+				<ul>
+					<li>Khóa giao tiếp: 2.600.000 VNĐ.</li>
+<li>Tiếng anh cơ bản: 2.880.000 VNĐ</li>
+<li>NasaoKid: 1.660.000 VNĐ</li>
+<li>Tiếng anh nâng cao: 3.990.000 VNĐ</li>
+				</ul>
+			<h5 width="30%">6.Quy trình và điều kiện học lại</h5>
+	<p>Đối với các học viên tham gia các khóa học tại Nasao English, trong trường hợp học viên cảm thấy chưa nắm chắc được kiến thức trong khóa học, học viên có quyền xin học lại khóa học.</p>
+	<h6>Điều kiện học lại</h6>
+				<ul>
+					<li>Đã hoàn thành 100% học phí..</li>
+					<li>Đã hoàn thành khóa học (tham dự 90% thời gian của khóa học (không tính thời gian các buổi học nhóm với trợ giảng))</li>
+					
+				</ul>
+			<h6>Quy trình học lại:</h6>
+				<ul>
+					<li>Học viên đến Trung tâm để làm thủ tục học lại</li>
+<li>Trao đổi lại với trung tâm về nguyện vọng của mình</li>
+
+				</ul>	
+				<h6>Lệ phí học lại: </h6>
+				<ul>
+					<li>Khóa giao tiếp: 1.600.000 VNĐ.</li>
+<li>Tiếng anh cơ bản: 1.880.000 VNĐ</li>
+<li>NasaoKid: 1.000.000 VNĐ</li>
+<li>Tiếng anh nâng cao: 2.990.000 VNĐ</li>
+				</ul>	
+		</div>
+</div>
+
+
+<div class=" footer">
+		 <div class="row footerr "> 
+	
+				<div class="col-12 col-md-6 col-sm-6 col-lg-3 col-xl-3 box1">
+					<p class="footer1">Về  Nasao English</p>
+					<p class="footer2">Giới thiệu </p>
+					<p class="footer2">Liên hệ </p>
+					<p class="footer2">Chương trình học</p>
+					<p class="footer2">Luyện thi</p>
+				</div>
+				<div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-3  box">
+					<p class="footer1">Liên hệ </p>
+					<p class="footer2">Địa chỉ 1: Số 16, ngõ 237 Ngô Xuân Quảng, Trâu Quỳ, Gia Lâm, Gia Lâm Phố, Việt Nam</p>
+<p class="footer2">Địa chỉ 2: tầng 2 – số 345 Ngô Xuân Quảng , Trâu Quỳ, Gia Lâm Phố, Việt Nam.</p>
+					
+					<p class="đt"> 097 398 30 89</p>
+					<p class="đt">Cô Nguyễn Thị Linh</p>
+				</div>
+				<div class="col-12 col-md-7 col-sm-7 col-lg-5 col-xl-6 boxx2 ">
+					<p class="footer1"> Dịch vụ nổi bật</p>
+					<p class="footer2">You can trust us. we only send promo offers, not a single spam.</p>
+					
+					<button type="button" class="btn btn-outline-secondary button">Your Mail Address</button><button class="btn btn-primary prima" type="submit">GetStarted  <i class="fa fa-arrow-right right" aria-hidden="true"></i> </button>
+				</div>
+				<div class="col-12 col-md-12 col-sm-12 col-lg-9 col-xl-7 boxx1">
+					<p>Coppyright@2019 All rights reserved| This template is made with <i class="fa fa-heart-o heart" aria-hidden="true"></i> by <span class="heart">Kindeser</span></p>
+			</div>
+
+			<div class="col-12 col-md-12 col-sm-12 col-lg-3 col-xl-5 boxx1">
+					<a target="_blank" href="https://www.facebook.com/nasao.vn "><img src="images/facebook.png" style="width: 50px;height: 50px;"> 
+					<a target="_blank" href="https://goo.gl/UPNpuD"><img src="images/youtobe.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://zalo.me/0973983089"><img src="images/zalo.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://m.me/nasao.vn"><img src="images/mess.png" style="width: 50px;height: 50px;">
+				</div>
+			</div>
+		</div>
+		
+</div>
+	
+</body>
+</html>

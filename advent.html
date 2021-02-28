@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script src="../Js/js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="../css/font-awesome.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<script >
+		new WOW().init();
+	</script>
+	
+</head>
+
+</head>
+<body>
+	<div id="head">
+		<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid nav">
+			
+			<a class="navbar-branch" href="#">
+				<span>Trung tâm học tiếng anh chất lượng cao</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive"> 
+			
+					<li class="nav-item">
+						<a class="nav-link active" href="index.html">Trang chủ </a>
+	
+					</li>
+					<li class="nav-item">
+						<a class="nav-link"> Chương trình học  </a>
+						<ul class="sub-menu">
+					<li><a href="basic.html">Tiếng anh cơ bản</a></li>
+					<li><a href="advent.html">Tiếng anh Nâng cao</a>
+					<li><a href="comunication.html">Tiếng anh Giao tiếp</a></li>
+					<li><a href="child.html">Tiếng anh Trẻ nhỏ</a>
+						
+					</ul>
+						
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="student.html">Nội quy học viên</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Liên hệ </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link">Luyện thi</a>
+						<ul class="sub-menu1">
+					<li><a href="tesrwrite.html">Luyện viết </a></li>
+					<li><a href="tesread.html">Luyện đọc </a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav> 
+	<div class="heading">
+		<div class="row">
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				<img src="images/nasao-logo-1.png">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <input  id="seach" type="text" name="timkiem" placeholder="Nhập từ khóa tìm kiếm  ">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <a class="" href=""><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+				 <a class="" href=""><i class="fa fa-youtube-play icon "style="font-size:35px" aria-hidden="true"></i></a>
+				<button type="button" class="btn btn-primary btn1">Login</button>
+					<button type="button" class="btn btn-primary btn1">Đăng kí </button>
+						
+			</div>
+			
+
+		</div>
+	</div> 
+	<div id="slider-show">
+		
+		<img class=" img-slide " src="images/banner-nasao-06-min.jpg">
+	
+	
+		<img  class="img-slide" src="images/banner-nasao-L2-01-min-1400x439.png">
+		
+		<img class="img-slide"  src="images/banner-nasao-L2-02-min-1400x439.png">
+	
+		<button class="prev" onclick="next(-1)"> < </button>
+		<button class="next" onclick="next(1)"> > </button>
+	
+	</div>
+	<div id="main1">
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		</div>
+	<script >
+		
+		var index=1;//Trỏ vào slice đàu tiên 
+		show(index);
+		function next(n){
+			show(index+=n);
+		}
+		function show(n){
+			var x= document.getElementsByClassName("img-slide");
+			if(n>x.length)//khi quá số slice nó sẽ quay về ảnh đầu tiên 
+				index=1;
+			if(n<1)
+				index=x.length;
+			for (var i = 0; i <x.length; i++) {
+				x[i].style.display="none"
+			}
+			x[index-1].style.display="block";
+		}
+		setInterval(function(){
+			next(1);
+		},10000);
+	</script>
+
+
+
+	<div class="container-fluid">
+	<div class="row ">
+		<div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-12 department wow animated bounceInDown"data now-delay="0.8s">
+			<center>
+				<p class="category">Khóa Học Tiếng Anh Nâng Cao </p>
+			
+				<p class=Category>"Khóa học tiếng Anh giao tiếp Nâng cao được thiết kế nhằm giúp học viên nâng cao, rèn luyện khả năng giao tiếp tiếng Anh trong môi trường làm việc. Từ đó mở rộng thêm cơ hội việc làm và thăng tiến trong sự nghiệp. Khóa học đặc biệt này sẽ giúp các bạn tăng sự tự tin khi sử dụng tiếng Anh trong các tình huống giao tiếp tại công sở. Phù hợp với các bạn các bạn đã có kiến thức cơ bản."</p>
+			</center>
+		</div>
+</div>
+</div>
+	<div class="container-fluid">
+	<div class="row img">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 " >
+			<img src="images/trung-tam-gia-su.jpg" style="width: 340px;height: 240px;margin-left: 40%;">
+		</div>
+		<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 ">
+			<img src="images/Combo-min.jpg" style="width: 340px;height: 240px;margin-left: 24%;">
+		</div>
+		<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+			<img src="images/giao_vien_va_phu_huynh.jpg" style="width: 340px;height: 240px;">
+		</div>
+	</div>
+
+<div class="informatoin">
+	<div class="row">
+		<div class="border text-center text-md-left order-md-2 course-detail-div">
+            <h4 class="title-header" style="font-size: 25px; font-weight: 600; margin-bottom: 10px;"><img class="png-icon mr-3" src="images/direction.png" style="width: 50px !important">GIỚI THIỆU KHÓA HỌC</h4><br>
+            <div class="flexbox info-course">
+              <span><i class="icon-calendar mr-2"></i><b>Thời lượng</b></span>
+              <b>Từ 2/3 tháng một lộ trình</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Số lượng học viên</b></span>
+              <b>10-15 học viên</b>
+
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Học phí </b></span>
+              <b>9.000.000VNĐ</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Giáo viên</b></span>
+              <b>Cô KATE FORSHAW <br> Thầy MARTIN ALLEN</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Trợ giảng</b></span>
+              <b>Trần Minh An</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Lịch khai giảng </b></span>
+              <b>Thứ 2 và thứ 5 hàng tuần <br>(Dự kiến)</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Ngày khai giảng </b></span>
+              <b>15/3/2021</b>
+            </div>
+            <br>
+            <div class="text-center">
+                          <a class="btn btn-block btn-register" href="#class_room_list" style="background: -webkit-linear-gradient(left,#ff7300,#ffaa30)!important; color: #fff; border: none;">Đăng kí ngay</a>
+            </div>
+          </div>				
+	</div>
+</div>
+	<div class="container-fluid ">
+	<div class="row ">
+		<div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-12 de ">
+			<center>
+				<img src="images/like.png" style="margin-left: -300px;"><h4 style="color:blue;">Lợi Ích Của Khóa học </h4>
+			
+				<p class=Category>Khóa học với 100% giáo viên bản ngữ sẽ giúp cho tiếng Anh giao tiếp của bạn trôi chảy .Hoàn toàn tự tin giao tiếp với người nước ngoài và sử dụng thuần thục cho các công việc khác yêu cầu tiếng Anh
+
+Khoá học này được thiết kế dành cho các học viên đã có nền tảng tiếng Anh tương đối, giúp nâng cao khả năng ngôn ngữ của người học, hướng đến các mục tiêu ngôn ngữ đầu ra cao phục vụ cho việc du học, xin học bổng, hay sử dụng tiếng Anh trong các công việc đòi hỏi có sự hiểu biết sâu rộng hơn.
+Ngoài việc khơi gợi vốn kiến thức về ngữ pháp, từ vựng, ngữ âm được học trong các  khoá học Tiếng Anh Giao Tiếp trôi chảy, học viên sẽ được tiếp tục mở rộng vốn từ, cấu trúc câu phức tạp cũng như thử thách phản xạ nghe nói ở mức độ sâu, khó, và dài hơn. Khóa học giao tiếp nâng cao giúp người học giao tiếp lưu loát và tự tin trong những tình huống đa dạng và phức tạp hơn trong cuộc sống. </p>
+<p>Tiếp tục phát huy khả năng tiếng Anh ở trình độ nâng cao hơn với phương pháp hiệu quả:<br>
+
+- Môi trường sử dụng Anh ngữ 100% với giáo viên bản địa giúp người học luyện tập khả năng chuyên sâu hơn về ngôn ngữ. Người học có thể yêu cầu sự trợ giúp và giải đáp những thắc mắc từ chính giáo viên bản địa phụ trách lớp. Từ đó, các kỹ năng diễn đạt và phản xạ bằng Tiếng Anh được cải thiện một cách triển để.<br>
+- Các đề tài được đưa ra ở mức độ khó hơn: nghề nghiệp, thể thao, kinh tế, văn hoá, địa lý, y tế…giúp người học mở rộng vốn từ vựng và kiến thức về văn hóa, từ đó có thể bày tỏ quan điểm cá nhân về những chủ đề ở mức độ chuyên sâu hơn.<br>
+- Sự trợ giúp của các phương tiện giảng dạy hiện đại, tiên tiến (DVD Player, OHP, Projector) cùng hệ thống giáo cụ trực quan cập nhật và sinh động, giúp người học có kiến thức nền nhất định về chủ đề mới và khó, từ đó giúp việc tiếp nhận tri thức mới trở nên dễ dàng hơn.
+<br>
+- Kỹ năng về phát âm và nói lưu loát được trau dồi, người học có hội được thuyết trình cá nhân hoặc nhóm về một chủ đề nhất định dưới sự hướng dẫn của giáo viên bản ngữ.  </p>
+			</center>
+		</div>
+</div>
+</div>
+<div class="container-fluid">
+	<div class="row ">
+		<div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-12 de ">
+			<center>
+				<img src="images/compass.png" style="margin-left: -300px;width: 70px;"><h4 style="color:blue;margin-top: -40px;">Nội dung  Khóa học </h4>
+
+			
+           <table 	 bgcolor="white" border="2px" width="1000px" height="700px" cellpadding="10px" cellspacing="1px">
+		<tr>
+			<td><h6 style="margin-top: ;">Giai đoạn 1: 1.0-3.0</h6></td>
+			<td><p style="margin-top: ;">Chuẩn hóa ngữ âm cơ bản (đọc từ đơn lẻ) và nâng cao (trọng âm, âm cuối, (Pre IELTS) nối âm, ngữ điệu)<br>
+
+ Bổ sung vốn từ vựng về những chủ đề cơ bản hay gặp trong Listening và Speaking IELTS.<br>
+
+Nắm vững các chủ điểm ngữ pháp quan trọng: Từ loại, thì, cấu trúc câu…hay gặp trong IELTS<br>
+
+Luyện viết chính xác các dạng câu cơ bản.<br>
+
+Làm quen với chiến thuật làm bài Listening</p></td>
+		</tr>
+		<tr>
+			<td><h6 style="margin-top: ;">Giai đoạn 2: 3.0-4.0</h6></td>
+			<td><p style="margin-top: ;">Làm quen và nắm vững các chủ điểm ngữ pháp nâng cao thường gặp trong IELTS: câu bị động, câu điều kiện, mệnh đề quan hệ,…<br>
+
+Tiếp tục bổ sung vốn từ vựng tương đương trình độ.<br>
+
+Làm quen với format đề thi IELTS.<br>
+
+Nắm được phương pháp và luyện tập các dạng trong Listening và Reading : Điền từ, trắc nghiệm, trả lời ngắn<br>
+ Luyện phản xạ với các câu hỏi trong Speaking part 1</p></td>
+		</tr>
+		<tr>
+			<<td><h6 style="margin-top: ;">Giai đoạn 3: 4.0-5.0</h6></td>
+			<td><p style="margin-top: ;">Tiếp tục luyện tập các dạng đã học trong Listening và Reading, nắm được phương pháp và luyện thêm các dạng: Nối thông tin, Chọn từ 1 list đáp án, Yes/No/Given, True/False/Not Given<br>
+
+Tiếp tục luyện Speaking part 1 và làm quen với các dạng và topic thường gặp trong part 2.<br>
+Nắm được dạng bài và biết cách làm bài Writing task 1 về các dạng phân tích số liệu<br>
+
+Luyện viết đoạn văn để chuẩn bị cho các dạng của Writing task 2"</p></td>
+		</tr>
+		<tr>
+			<<td><h6 style="margin-top: ;">Giai đoạn 4: 5.0-6.0</h6></td>
+			<td><p style="margin-top: ;">Tiếp tục luyện tập các dạng đã học trong Listening và Reading, nắm được phương pháp và luyện thêm các dạng: Nối thông tin, Chọn từ 1 list đáp án, Yes/No/Given, True/False/Not Given<br>
+ Tiếp tục luyện Speaking part 1 và làm quen với các dạng và topic thường gặp trong part 2.<br>
+
+Nắm được dạng bài và biết cách làm bài Writing task 1 về các dạng phân tích số liệu.<br>
+
+Luyện viết đoạn văn để chuẩn bị cho các dạng của Writing task 2"</p></td>
+		</tr>
+
+	</table>
+	
+            <div class="text-center">
+                          <a class="btn btn-block btn-register1" style="background: -webkit-linear-gradient(left,#ff7300,#ffaa30)!important; color: #fff; border: none;">Đăng kí ngay</a>
+            </div>
+        </div>
+    </center>
+          </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+	<div class=" footer">
+		 <div class="row footerr "> 
+	
+				<div class="col-12 col-md-6 col-sm-6 col-lg-3 col-xl-3 box1">
+					<p class="footer1">Về  Nasao English</p>
+					<p class="footer2">Giớin hệ </p>
+					<p class="footer2">Chương trình học</p>
+					<p class="footer2">Luyện thi</p>
+				</div>
+				<div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-3  box">
+					<p class="footer1">Liên hệ </p>
+					<p class="footer2">Địa chỉ 1: Số 16, ngõ 237 Ngô Xuân Quảng, Trâu Quỳ, Gia Lâm, Gia Lâm Phố, Việt Nam</p>
+<p class="footer2">Địa chỉ 2: tầng 2 – số 345 Ngô Xuân Quảng , Trâu Quỳ, Gia Lâm Phố, Việt Nam.</p>
+					
+					<p class="đt"> 097 398 30 89</p>
+					<p class="đt">Cô Nguyễn Thị Linh</p>
+				</div>
+				<div class="col-12 col-md-7 col-sm-7 col-lg-5 col-xl-6 boxx2 ">
+					<p class="footer1"> Dịch vụ nổi bật</p>
+					<p class="footer2">You can trust us. we only send promo offers, not a single spam.</p>
+					
+					<button type="button" class="btn btn-outline-secondary button">Your Mail Address</button><button class="btn btn-primary prima" type="submit">GetStarted  <i class="fa fa-arrow-right right" aria-hidden="true"></i> </button>
+				</div>
+				<div class="col-12 col-md-12 col-sm-12 col-lg-9 col-xl-7 boxx1">
+					<p>Coppyright@2019 All rights reserved| This template is made with <i class="fa fa-heart-o heart" aria-hidden="true"></i> by <span class="heart">Kindeser</span></p>
+			</div>
+
+			<div class="col-12 col-md-12 col-sm-12 col-lg-3 col-xl-5 boxx1">
+					<a target="_blank" href="https://www.facebook.com/nasao.vn "><img src="images/facebook.png" style="width: 50px;height: 50px;"> 
+					<a target="_blank" href="https://goo.gl/UPNpuD"><img src="images/youtobe.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://zalo.me/0973983089"><img src="images/zalo.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://m.me/nasao.vn"><img src="images/mess.png" style="width: 50px;height: 50px;">
+				</div>
+			</div>
+		</div>
+		
+</div>
+	
+</body>
+</html>

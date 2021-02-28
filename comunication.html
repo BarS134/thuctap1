@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script src="../Js/js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="../css/font-awesome.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<script >
+		new WOW().init();
+	</script>
+	
+</head>
+
+</head>
+<body>
+	<div id="head">
+		<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid nav">
+			
+			<a class="navbar-branch" href="#">
+				<span>Trung tâm học tiếng anh chất lượng cao</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive"> 
+			
+					<li class="nav-item">
+						<a class="nav-link active" href="index.html">Trang chủ </a>
+	
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="basic.html"> Chương trình học  </a>
+
+					</ul>
+						
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../pages/doctor.html">Nội quy học viên</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Liên hệ </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../pages/about.html">Luyện thi</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav> 
+	<div class="heading">
+		<div class="row">
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				<img src="images/nasao-logo-1.png">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <input  id="seach" type="text" name="timkiem" placeholder="Nhập từ khóa tìm kiếm  ">
+			</div>
+			<div class="col-12 col sm-6 col-md-4 col-lg-4 col-xl-4">
+				 <a class="" href=""><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+				 <a class="" href=""><i class="fa fa-youtube-play icon "style="font-size:35px" aria-hidden="true"></i></a>
+				<button type="button" class="btn btn-primary btn1">Login</button>
+					<button type="button" class="btn btn-primary btn1">Đăng kí </button>
+						
+		</div>
+			
+		</div>
+	</div> 
+
+
+	<div id="slider-show">
+		
+		<img class=" img-slide " src="images/banner-nasao-06-min.jpg">
+	
+	
+		<img  class="img-slide" src="images/banner-nasao-L2-01-min-1400x439.png">
+		
+		<img class="img-slide"  src="images/banner-nasao-L2-02-min-1400x439.png">
+	
+		<button class="prev" onclick="next(-1)"> < </button>
+		<button class="next" onclick="next(1)"> > </button>
+	
+	</div>
+	<div id="main1">
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		<div class="main1-3"></div>
+		</div>
+	<script >
+		
+		var index=1;//Trỏ vào slice đàu tiên 
+		show(index);
+		function next(n){
+			show(index+=n);
+		}
+		function show(n){
+			var x= document.getElementsByClassName("img-slide");
+			if(n>x.length)//khi quá số slice nó sẽ quay về ảnh đầu tiên 
+				index=1;
+			if(n<1)
+				index=x.length;
+			for (var i = 0; i <x.length; i++) {
+				x[i].style.display="none"
+			}
+			x[index-1].style.display="block";
+		}
+		setInterval(function(){
+			next(1);
+		},10000);
+	</script>
+
+<div class="container-fluid">
+	<div class="row ">
+		<div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-12 department ">
+			<center>
+				<p class="category">Tiếng Anh Giao Tiếp </p>
+			<h5 style="color: pink;">
+
+Giỏi TOÀN DIỆN Nghe – Nói – Đọc – Viết chỉ trong một khóa học</h5>
+				<p class=Category>Trước một tương lai biến động không ngừng, người trẻ sẽ cần trang bị những kỹ năng cần thiết để dễ dàng chủ động trước những thay đổi và góp phần thay đổi thế giới. Thông qua các khóa học tiếng Anh đạt chuẩn quốc tế, Nasao tự hào đồng hành cùng học sinh Việt Nam trên hành trình xây dựng nền tảng Anh ngữ vững chắc và những ưu thế để bứt phá và tự tin kiến tạo tương lai.Lộ trình Tiếng Anh Toàn Diện 4 Kỹ Năng hướng tới phát triển trọn vẹn các kỹ năng Nghe – Nói – Đọc – Viết giúp Học viên tự tin sử dụng tiếng Anh trong giao tiếp, thuyết trình với người nước ngoài bằng phản xạ tự nhiên, khả năng đọc hiểu – viết tốt và dễ dàng sử dụng trong học tập hay làm việc trong môi trường quốc tế.</p>
+				<br>
+				<img src="images/trung-tam-gia-su.jpg">
+			</center>
+			<h5 style="color: blue;">Đối tượng tham gia khóa học</h5>
+				<p class=Category>
+					<ul>
+						<li>Học viên muốn học tiếng anh giao tiếp từ cơ bản</li>
+						<li>Các Học viên đã nắm được kiến thức nền tảng tiếng Anh nhưng chưa sử dụng đươc tiếng Anh trong học tập và công việc</li>
+						<li>Các Học viên đã có thể Nghe - Nói - Đọc - Viết cơ bản nhưng muốn phát triển nâng cao các kĩ năng này</li>
+						<li>Muốn tự tin trong giao tiếp, thuyết trunhf bằng tiếng anh</li>
+						<li>Các học viên chưa biết nên bắt đầu học giao tiếp từ đâu</li>
+					</ul>
+				</p>
+		</div>
+</div>
+<div class="container-fluid">
+	<div class="row ">
+		<div class="col-md-12 col-12 col-sm-12 col-lg-12 col-xl-12 de ">
+			<center>
+				<img src="images/compass.png" style="margin-left: -430px;width: 70px;"><h4 style="color:blue;margin-top: -40px;">LỘ TRÌNH KHÓA HỌC BAO GỒM </h4>
+
+			
+           <table bgcolor="white" border="2px" width="1300px" height="700px" cellpadding="10px" cellspacing="1px">
+		<tr>
+			<td><h5 >GIAI ĐOẠN PRE-S (20 buổi)</h6></td>
+			<td><p >BỔ SUNG KIẾN THỨC NỀN TẢNG Có thể nghe hiểu những từ và những cụm liên quan đến cá nhân gia đình và hoặc những chủ đề quen thuộc khi người nói nói tốc độ chậm và rõ ràng.</p>Hiểu được các quy tắc phát âm cơ bản, cách đọc và sử dụng bảng IPA. Có thể hỏi và trả lời những câu hỏi đơn giản với những chủ đề quen thuộc hàng ngày</p> <p>Đọc hiểu những thông báo, các đoạn hội thoại ngắn với hệ thống từ vựng và ngữ pháp cơ bản. Có thể điền các biểu mẫu thông tin cá nhân, viết bưu thiếp hay những câu ngắn đơn giản.</p></td>
+		</tr>
+		<tr>
+			<td><h5 >GIAI ĐOẠN S (20 buổi)</h5></td>
+			<td><p >PHÁT TRIỂN TOÀN DIỆN 4 KỸ NĂNG Hiểu những ý chính của một bài nói dài với những nội dung quen thuộc trong trường học, công việc và cuộc sống.</p>
+				<p>Hiểu những ý chính của nhiều chương trình truyền hình ở tốc độ nói vừa. Xử lý được hầu hết các tình huống có thể xảy ra khi du lịch ở đất nước nói tiếng Anh, tham gia vào những tình huống giao tiếp với chủ đề quen thuộc (gia đình, sở thích, công việc, du lịch hoặc những sự kiện mới xảy ra) mặc dù chưa có sự chuẩn bị trước.</p>
+				<p>Có thể diễn đạt đưa ra lý do hay ý kiến cá nhân khi tranh luận. Hiểu và vận dụng được các kỹ thuật đọc hiểu như “Skimming” và “Scanning”.</p>
+				<p>Nâng cao tốc độ, đọc hiểu và trả lời các câu hỏi với những bài đọc dài và khó. Viết những đoạn văn về những chủ đề quen thuộc, thông tin cá nhân và CV hay thư mô tả những trải nghiệm và cảm xúc cá nhân.</p>
+			</td>
+		</tr>
+		<tr>
+			<td><h5 >GIAI ĐOẠN MTC (20 buổi)</h5></td>
+			<td><p >PHÁT TRIỂN TOÀN DIỆN 4 KỸ NĂNG NÂNG CAO Hiểu được những bài nói, bài giảng và theo dõi được những lời thoại khó của những đoạn tranh luận với những nội dung quen thuộc.</p>
+				<p>Có thể hiểu hầu hết những tin tức và những chương trình thực tế trên ti vi, có thể hiểu được phần lớn phim với các giọng chuẩn (Anh Anh, Anh Mỹ).</p>
+				<p>Có ngữ điệu nói tự nhiên và chủ động thay đổi ngữ điệu phù hợp với mục đích giao tiếp Có thể giải thích góc nhìn của mình về một vấn đề: đưa ra ưu, nhược điểm của các lựa chọn khác nhau</p>
+				<p>Có thể phản xạ với người bản xứ một cách tự nhiên, chủ động trong việc trao đổi, thảo luận những chủ đề quen thuộc.</p>
+				<p>Có thể đọc hiểu những bài viết và báo cáo liên quan đến những vấn đề thời sự, chuyên ngành cụ thể.</p>
+				<p>Có thể viết những đoạn văn rõ ràng, cấu trúc tốt thể hiện được quan điểm với các độ dài khác nhau</p>
+
+			</td>
+		</tr>
+		
+
+	</table>
+	
+            <div class="text-center">
+                          <a class="btn btn-block btn-register1" style="background: -webkit-linear-gradient(left,#ff7300,#ffaa30)!important; color: #fff; border: none;">Đăng kí ngay</a>
+            </div>
+        </div>
+    </center>
+          </div>
+          
+  </div>
+
+</div>
+<div class="informatoin">
+	<div class="row">
+		<div class="border text-center text-md-left order-md-2 course-detail-div">
+            <h4 class="title-header" style="font-size: 25px; font-weight: 600; margin-bottom: 10px;"><img class="png-icon mr-3" src="images/direction.png" style="width: 50px !important">THÔNG TIN KHÓA HỌC</h4><br>
+            <div class="flexbox info-course">
+              <span><i class="icon-calendar mr-2"></i><b>Thời lượng</b></span>
+              <b>Từ 3 tháng một lộ trình</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Số lượng học viên</b></span>
+              <b>10 học viên</b>
+
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Học phí </b></span>
+              <b>4.000.000VNĐ</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Giáo viên</b></span>
+              <b>Cô Nguyễn Bảo Anh  <br> Thầy MARTIN ALLEN</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Trợ giảng</b></span>
+              <b>Trần Khánh Linh</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Lịch khai giảng </b></span>
+              <b>Thứ 2 và thứ 5 hàng tuần <br>(Dự kiến)</b>
+            </div>
+            <div class="flexbox info-course">
+              <span><i class="icon-profile-male mr-2"></i><b>Ngày khai giảng </b></span>
+              <b>19/3/2021</b>
+            </div>
+            <br>
+            <div class="text-center">
+                          <a class="btn btn-block btn-register" href="#class_room_list" style="background: -webkit-linear-gradient(left,#ff7300,#ffaa30)!important; color: #fff; border: none;">Đăng kí ngay</a>
+            </div>
+          </div>	
+          			
+	</div>
+</div>
+<br>
+
+
+
+<div class=" footer">
+		 <div class="row footerr "> 
+	
+				<div class="col-12 col-md-6 col-sm-6 col-lg-3 col-xl-3 box1">
+					<p class="footer1">Về  Nasao English</p>
+					<p class="footer2">Giới thiệu </p>
+					<p class="footer2">Liên hệ </p>
+					<p class="footer2">Chương trình học</p>
+					<p class="footer2">Luyện thi</p>
+				</div>
+				<div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-3  box">
+					<p class="footer1">Liên hệ </p>
+					<p class="footer2">Địa chỉ 1: Số 16, ngõ 237 Ngô Xuân Quảng, Trâu Quỳ, Gia Lâm, Gia Lâm Phố, Việt Nam</p>
+<p class="footer2">Địa chỉ 2: tầng 2 – số 345 Ngô Xuân Quảng , Trâu Quỳ, Gia Lâm Phố, Việt Nam.</p>
+					
+					<p class="đt"> 097 398 30 89</p>
+					<p class="đt">Cô Nguyễn Thị Linh</p>
+				</div>
+				<div class="col-12 col-md-7 col-sm-7 col-lg-5 col-xl-6 boxx2 ">
+					<p class="footer1"> Dịch vụ nổi bật</p>
+					<p class="footer2">You can trust us. we only send promo offers, not a single spam.</p>
+					
+					<button type="button" class="btn btn-outline-secondary button">Your Mail Address</button><button class="btn btn-primary prima" type="submit">GetStarted  <i class="fa fa-arrow-right right" aria-hidden="true"></i> </button>
+				</div>
+				<div class="col-12 col-md-12 col-sm-12 col-lg-9 col-xl-7 boxx1">
+					<p>Coppyright@2019 All rights reserved| This template is made with <i class="fa fa-heart-o heart" aria-hidden="true"></i> by <span class="heart">Kindeser</span></p>
+			</div>
+
+			<div class="col-12 col-md-12 col-sm-12 col-lg-3 col-xl-5 boxx1">
+					<a target="_blank" href="https://www.facebook.com/nasao.vn "><img src="images/facebook.png" style="width: 50px;height: 50px;"> 
+					<a target="_blank" href="https://goo.gl/UPNpuD"><img src="images/youtobe.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://zalo.me/0973983089"><img src="images/zalo.png" style="width: 50px;height: 50px;">
+					<a target="_blank" href="https://m.me/nasao.vn"><img src="images/mess.png" style="width: 50px;height: 50px;">
+				</div>
+			</div>
+		</div>
+		
+</div>
+	
+</body>
+</html>
